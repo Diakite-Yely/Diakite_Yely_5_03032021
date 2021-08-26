@@ -1,0 +1,295 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+a
+{text-decoration: none;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*CSS RESET*/
+div{
+	font-family: arial,sans-serif; 
+}
+body
+{
+	background-image: linear-gradient(rgba(172, 122, 15, 0.5),),
+}
+header
+{
+   display: grid;
+   grid-template-columns: 80% 20%;
+   margin-bottom: 50px;
+   padding-top: 10px;
+
+   .titre {
+	   justify-self: center;
+	   font-family: arial,sans-serif;
+	   grid-area: 1/1/2/-1;
+
+	   h1
+	   {
+		font-size: 30px;
+		color: #fff;
+	   }
+   }
+   .icone {
+	   justify-self: end;
+	   margin-right: 20px;
+	   font-size: 25px;
+	   grid-area:1/2/2/-1;
+	   .shop{
+		   color: black
+	   }
+   }
+
+}
+
+#main {
+	display:grid;
+	grid-template-columns: auto auto auto;
+	grid-row-gap: 20px;
+   
+
+
+}
+
+article
+{
+		    border-top-left-radius: 20px ;
+			border-top-right-radius: 20px;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			width:320px;
+			background-color: white;
+			transform: scale(1);
+			transition: 0.5s;
+			justify-self: center;
+			cursor: pointer;
+			background-color: navajowhite;
+			&:hover {
+				transform: scale(1.1);
+				transition: 0.5s
+			}
+	.img {
+		object-fit: cover;
+		width:100%;
+		height:170px;
+		border-top-left-radius: 20px ;
+		border-top-right-radius: 20px;
+	  }
+	  .info {
+                  display:grid;
+				  grid-template-columns:50% 50%;
+				  height:40px;
+                  border-bottom-right-radius: 20px;
+                  border-bottom-left-radius: 20px;
+				  color: black;
+				  .price {
+					justify-self: end;
+					padding: 10px;
+				}
+				.titre {
+					padding: 10px;
+				}
+
+          	}
+
+}
+
+
+
+.description {
+	font-family: arial,sans-serif;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+    font-size: 25px;
+}
+
+footer
+{
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns:auto auto;
+	.contact {
+		justify-self: center;
+	}
+	.mention {
+		justify-self: center;
+	}
+}
+
+/*-----------------------------------------PAGE PRODUIT--------------------*/
+
+.produit{
+
+	display:flex;
+	flex-direction: column;
+	width: 500px;
+	justify-content: center;
+	background-color:rgba(255, 255, 255, 0.623);
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	margin: auto;
+
+	&-img
+	{
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		width: 500px;
+		object-fit: cover;
+		justify-self: center;
+		height: 350px;
+	}
+
+	&-titre {
+	    margin: 20px;
+		justify-self: center;
+		font-size: 20px;
+
+	}
+	&-description {
+		margin: 0 20px;
+	}
+	&-prix{
+		margin: 20px;
+	}
+	&-choix{
+		display: grid;
+		grid-template-columns: auto auto;
+       
+		&-quantite {
+            justify-self: center;
+			input
+			{
+				width:50px
+			}
+		}
+		&-couleur {
+			justify-self: center;
+		}
+	}
+	&-ajout {
+		display: flex;
+		justify-content: center;
+		color: black;
+		margin: 20px;
+		padding-bottom: 50px;
+	}
+	.black
+	{
+	 color: black;
+	}
+}
+
+//----------------------------------------Page Panier-----------------------------//
+
+.container {
+	border: solid 2px black;
+    background-color: #EFE6D1;
+	.panier {
+		padding-bottom: 20px;
+		border-bottom: dashed 2px;
+		margin-bottom: 20px;
+		h2{
+			display: flex;
+			font-size: 25px;
+			justify-content: center;
+			margin-bottom: 50px;
+			margin-top: 20px;
+		}
+		&-vide{
+		display: flex;
+		justify-content: center;
+		margin:20px
+		}
+		.panier-produit{
+			display: grid;
+			grid-template-columns: auto auto;
+			margin-bottom: 20px;
+			&-nom{
+				 justify-self: center;
+				 margin-bottom: 20px;
+				 font-size: 20px;
+			}
+			&-prix{
+				justify-self: center;
+				margin-bottom: 20px;
+				font-size: 20px;
+			}
+		}
+		.recap-panier{
+			display: grid;
+			grid-template-columns: auto auto;
+			margin-bottom: 10px;
+			&-montant{
+				justify-self: center;
+				display: flex;
+				&-text{
+					margin-right: 5px;
+				}
+			}
+			&-btn{
+				justify-self: center;
+			}
+		}
+	}
+
+   
+}
+//---------------------------Formulaire du panier-----------------
+.formulaire {
+	&-title{
+		margin-bottom: 10px;
+		display: flex;
+        justify-content: center;
+        font-size: 20px;
+	}
+}
