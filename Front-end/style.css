@@ -360,6 +360,21 @@ footer .mention {
       justify-self: center;
 }
 
+.container .btn-commande {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container .btn-commande .commande {
+  font-size: 17px;
+}
+
 .formulaire-title {
   margin-bottom: 10px;
   display: -webkit-box;
@@ -369,5 +384,28 @@ footer .mention {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 20px;
+}
+
+@media all and (max-width: 1300px) {
+  #main {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+}
+
+@media all and (max-width: 767px) {
+  #main {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  .produit {
+    width: 300px;
+  }
+  .produit-img {
+    width: 300px;
+    height: 250px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
